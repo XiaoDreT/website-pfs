@@ -1,0 +1,17 @@
+User-agent: *
+
+sitemap: http://www.primeforklift.co.id/sitemap.xml
+
+# Allow Image
+User-agent: Googlebot-Image
+Allow: /news/userfile/ 
+
+# digg mirror
+User-agent: duggmirror
+Disallow: /
+
+
+
+#Begin Attracta SEO Tools Sitemap. Do not remove
+sitemap: http://cdn.attracta.com/sitemap/5969256.xml.gz
+#End Attracta SEO Tools Sitemap. Do not remove
