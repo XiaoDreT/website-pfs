@@ -14,9 +14,9 @@ RewriteEngine On
 # RewriteRule ^ https://www.primeforklift.co.id%{REQUEST_URI} [L,R=301]
 
 # Force HTTPS and www new from google
-RewriteCond %{HTTP_HOST} !^www\. [NC,OR]
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://www.primeforklift.co.id%{REQUEST_URI} [L,R=301]
+# RewriteCond %{HTTP_HOST} !^www\. [NC,OR]
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://www.primeforklift.co.id%{REQUEST_URI} [L,R=301]
 
 #mengubah blog/ menjadi blog/1
 RewriteCond %{REQUEST_URI} ^/blog/$

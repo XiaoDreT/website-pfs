@@ -15,19 +15,41 @@
 |
 */
 //$config['base_url']	= '';
+// if (isset($_SERVER['HTTP_HOST'])) {
+//     $config['base_url'] = isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on' ? 'https' : 'http';
+//     $config['base_url'] .= '://' . $_SERVER['HTTP_HOST'];
+//     $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
+// } else {
+//     $config['base_url'] = '';
+// }
+
+// if ($_SERVER['SERVER_NAME'] = 'localhost' || $_SERVER['SERVER_ADDR'] = '::1') {
+//     $config['server_root'] = $_SERVER['DOCUMENT_ROOT'] . str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
+// } else {
+//     $config['server_root'] = $_SERVER['DOCUMENT_ROOT'];
+// }
+
 if (isset($_SERVER['HTTP_HOST'])) {
+    // Tentukan skema (HTTP atau HTTPS)
     $config['base_url'] = isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on' ? 'https' : 'http';
     $config['base_url'] .= '://' . $_SERVER['HTTP_HOST'];
+
+    // Tambahkan path ke folder website-pfs
+    $config['base_url'] .= '/website-pfs'; // Pastikan untuk menambahkan ini
+
+    // Tambahkan path ke direktori skrip
     $config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
 } else {
     $config['base_url'] = '';
 }
 
-if ($_SERVER['SERVER_NAME'] = 'localhost' || $_SERVER['SERVER_ADDR'] = '::1') {
-    $config['server_root'] = $_SERVER['DOCUMENT_ROOT'] . str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
+if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_ADDR'] == '::1') {
+    // Atur server_root ke folder website-pfs
+    $config['server_root'] = $_SERVER['DOCUMENT_ROOT'] . '/website-pfs' . str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
 } else {
     $config['server_root'] = $_SERVER['DOCUMENT_ROOT'];
 }
+
 
 /*
 |--------------------------------------------------------------------------
