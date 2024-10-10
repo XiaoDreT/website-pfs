@@ -23,6 +23,7 @@
 									<li><a style="font-size: 16px; font-weight: bold;" href="<?= site_url('sparepart'); ?>">Sparepart</a></li>
 									<li><a style="font-size: 16px; font-weight: bold;" href="<?= site_url('ban'); ?>">Ban Forklift</a></li>
 									<li><a style="font-size: 16px; font-weight: bold;" href="<?= site_url('battery'); ?>">Battery</a></li>
+									<li><a style="font-size: 16px; font-weight: bold;" href="<?= site_url('attachment'); ?>">Attachment</a></li>
 								</ul>
 							</li>
 							<li<?php echo $menu['link'] == 'services' ? ' class="active"' : ''; ?>><a href="<?php echo site_url('services'); ?>"><span class="fa fa-wrench" style="font-size: 16px;">&nbsp</span>Services</a></li>

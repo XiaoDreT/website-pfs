@@ -49,7 +49,7 @@ class Home extends MY_Controller {
             'protocol' => 'smtp',
             'smtp_host' => 'localhost',
             'smtp_port' => 25,
-             'smtp_user' => 'do-not-reply@primeforklift.co.id',
+            'smtp_user' => 'do-not-reply@primeforklift.co.id',
             'smtp_pass' => '7nQr4yYhA$Mn^',
             'mailtype' => 'html',
             'charset' => 'iso-8859-1'
