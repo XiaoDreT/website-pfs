@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-//$config['base_url']	= '';
+// $config['base_url']	= '';
 // if (isset($_SERVER['HTTP_HOST'])) {
 //     $config['base_url'] = isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on' ? 'https' : 'http';
 //     $config['base_url'] .= '://' . $_SERVER['HTTP_HOST'];
@@ -28,7 +28,7 @@
 // } else {
 //     $config['server_root'] = $_SERVER['DOCUMENT_ROOT'];
 // }
-
+$config['localTesting'] = 'http://localhost/website-pfs/';
 if (isset($_SERVER['HTTP_HOST'])) {
     // Tentukan skema (HTTP atau HTTPS)
     $config['base_url'] = isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on' ? 'https' : 'http';

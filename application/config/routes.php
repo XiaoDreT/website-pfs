@@ -46,6 +46,7 @@ $route['productDetail/(:any)'] = "latest/product/read";
 $route['sparepart'] = "latest/sparepart";
 $route['ban'] = "latest/ban";
 $route['battery'] = "latest/battery";
+$route['admin/client/add'] = "admin/client/add";
 $route['services'] = "latest/services";
 $route['rental'] = "latest/rental";
 $route['blog/(:num)'] = "latest/blog";

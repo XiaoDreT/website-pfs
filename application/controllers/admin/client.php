@@ -103,6 +103,7 @@ class Client extends MY_Controller {
 
     public function delete() {
         $param = $this->uri->uri_to_assoc(4);
+        // echo var_dump($param);die();
         $this->data['id'] = null;
         if (!empty($param)) {
             if (!empty($param['id'])) {

@@ -13,6 +13,8 @@ class Client_model extends MY_Model {
     public function add_data($data) {
         $this->trans_begin();
         $this->insert($data);
+        // echo "disini";
+        // echo $this->insert($data); die();
         $this->insert_id = $this->get_insert_id();
         if ($this->trans_status()) {
             $this->trans_commit();

@@ -31,6 +31,7 @@
                             if (!empty($list)) {
                                 $i = 1;
                                 foreach ($list as $row) {
+                                    if($row->status != 0){
                                     ?>
                                     <tr>
                                         <td class="text-center" style="vertical-align: middle;"><?php echo $i; ?></td>
@@ -40,10 +41,11 @@
                                         <td class="text-center" style="vertical-align: middle;"><?php echo $row->status; ?></td>
                                         <td class="text-center" style="vertical-align: middle;">
                                             <a href="<?php echo site_url('admin/client/update/id/' . $row->id); ?>" class="tip" title="Update This Client"><span class="glyphicon glyphicon-edit"></span></a>
-                                            <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="<?php echo site_url('admin/client/delete/id/' . $row->id); ?>" class="tip" title="Delete This Client"><span class="glyphicon glyphicon-trash"> </span></a>
+                                            <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="<?php echo config_item('localTesting')?>admin/client/delete/id/<?php echo $row->id; ?>" class="tip" title="Delete This Client"><span class="glyphicon glyphicon-trash"> </span></a>
                                         </td>
                                     </tr>
                                     <?php
+                                    }
                                     $i++;
                                 }
                             }

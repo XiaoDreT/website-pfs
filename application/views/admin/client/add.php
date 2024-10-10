@@ -13,7 +13,7 @@
                     echo $err_msg;
                 }
                 ?>
-                <form class="form-horizontal" action="<?php echo base_url('admin/client'); ?>/add" role="form" method="post">
+                <form class="form-horizontal" action="<?php echo config_item('localTesting')?>admin/client/add" role="form" method="post">
 
                     <div class="form-group">
                         <label class="col-lg-2 control-label" for="placeholder">Client Name</label>
