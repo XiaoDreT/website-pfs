@@ -33,6 +33,7 @@
                             if (!empty($list)) {
                                 $i = 1;
                                 foreach ($list as $row) {
+                                    if($row->status != 0){
                                     ?>
                                     <tr>
                                         <td class="text-center"><?php echo $i; ?></td>
@@ -45,10 +46,10 @@
                                         <td class="text-center">
                                             <a href="<?php echo site_url('admin/catalogues/view/id/' . $row->id); ?>" class="tip" title="View Catalogues"><span class="glyphicon glyphicon-book"> </span></a>&nbsp;&nbsp;
                                             <a href="<?php echo site_url('admin/catalogues/update/id/' . $row->id); ?>" class="tip" title="Update This Catalogues"><span class="glyphicon glyphicon-edit"> </span></a>
-                                            <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="<?php echo site_url('admin/catalogues/delete/id/' . $row->id); ?>" class="tip" title="Delete This Catalogues"><span class="glyphicon glyphicon-trash"> </span></a>
-                                        </td>
+                                            <a onclick="return confirm('Anda yakin ingin menghapus data ini?')" href="<?php echo config_item('localTesting')?>admin/catalogues/delete/id/<?php echo $row->id; ?>" class="tip" title="Delete This Catalogue"><span class="glyphicon glyphicon-trash"> </span></a>
                                     </tr>
                                     <?php
+                                    }
                                     $i++;
                                 }
                             }

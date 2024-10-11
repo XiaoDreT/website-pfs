@@ -25,7 +25,7 @@
                     echo $err_msg;
                 }
                 ?>
-                <form class="form-horizontal" action="<?php echo 'catalogues/update/id/'.$id ?>" role="form" method="post">
+                <form class="form-horizontal" action="<?php echo config_item('localTesting')?>admin/catalogues/update/id/" role="form" method="post">
 
                     <div class="form-group">
                         <label class="col-lg-2 control-label" for="placeholder">Catalogues Name</label>
@@ -57,6 +57,7 @@
                                 <option value="part" <?php $update->type == "part" ? "selected" : "" ?>>Sparepart</option>
                                 <option value="ban" <?php $update->type == "ban" ? "selected" : "" ?>>Ban</option>
                                 <option value="battery" <?php $update->type == "battery" ? "selected" : "" ?>>Battery</option>
+                                <option value="attachment" <?php $update->type == "attachment" ? "selected" : "" ?>>Attachment</option>
                             </select>
                         </div>
                     </div>

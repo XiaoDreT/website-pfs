@@ -25,7 +25,7 @@
                     echo $err_msg;
                 }
                 ?>
-                <form class="form-horizontal" action="catalogues/add" role="form" method="post">
+                <form class="form-horizontal" action="<?php echo config_item('localTesting')?>admin/catalogues/add" role="form" method="post">
 
                     <div class="form-group">
                         <label class="col-lg-2 control-label" for="placeholder">Catalogues Name</label>
@@ -57,6 +57,7 @@
                                 <option value="part">Sparepart</option>
                                 <option value="ban">Ban</option>
                                 <option value="battery">Battery</option>
+                                <option value="attachment">Attachment</option>
                             </select>
                         </div>
                     </div>

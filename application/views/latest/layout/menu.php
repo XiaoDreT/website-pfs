@@ -15,7 +15,7 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
-							<li<?php echo $menu['link'] == 'home' ? ' class="active"' : ''; ?>><a href="<?php echo site_url(); ?>"><span class="fa fa-home" style="font-size: 16px;">&nbsp</span>Home</a></li>
+							<li<?php echo $menu['link'] == 'home' ? ' class="active"' : ''; ?>><a href="<?php echo site_url('latest/home'); ?>"><span class="fa fa-home" style="font-size: 16px;">&nbsp</span>Home</a></li>
 							<li class="dropdown <?= $menu['link'] == 'product' || $menu['link'] == 'sparepart' || $menu['link'] == 'ban' || $menu['link'] == 'battery' ? 'active' : ''; ?>">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-gears" style="font-size: 16px;">&nbsp</span>Products <span class="caret"></span></a>
 								<ul class="dropdown-menu">
