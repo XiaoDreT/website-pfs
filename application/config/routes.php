@@ -48,6 +48,7 @@ $route['ban'] = "latest/ban";
 $route['battery'] = "latest/battery";
 $route['admin/client/add'] = "admin/client/add";
 $route['admin/catalogue/add'] = "admin/catalogue/add";
+$route['admin/user/add'] = "admin/user/add";
 $route['attachment'] = "latest/attachment";
 $route['services'] = "latest/services";
 $route['rental'] = "latest/rental";

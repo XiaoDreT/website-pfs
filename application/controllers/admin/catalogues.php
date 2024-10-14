@@ -169,6 +169,7 @@ class Catalogues extends MY_Controller {
     }
 
     public function add_merk($name){
+        // echo var_dump($name);die();
         if (!empty($name)) {
             $data = array(
                 "nama" => $name
