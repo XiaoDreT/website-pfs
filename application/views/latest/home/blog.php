@@ -1,8 +1,8 @@
 <?php if (!empty($rec_blog)) {
     $link = site_url('latest/blog/index/offset/1');
     ?>
-    <img class="img-right-title" src="<?php echo IMG_PATH; ?>blog.png" style="cursor: pointer;" onclick="window.location = '<? echo $link; ?>'">
-    <div class="container" style="clear: right;">
+    <img class="img-left-title" src="<?php echo IMG_PATH; ?>blog.png" style="cursor: pointer;" onclick="window.location = '<? echo $link; ?>'">
+    <div class="container" style="clear: left;">
         <div class="our-works" style="padding-top: 10px">
             <?php foreach ($rec_blog as $row) { 
                 $link = site_url('artikel/' . $row->id);

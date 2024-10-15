@@ -138,5 +138,6 @@
 <?php $this->load->view('latest/home/product'); ?>
 <?php $this->load->view('latest/home/services'); ?>
 <?php $this->load->view('latest/home/sparepart'); ?>
+<?php $this->load->view('latest/home/attachment'); ?>
 <?php $this->load->view('latest/home/blog'); ?>
 <?php $this->load->view('latest/home/client'); ?>

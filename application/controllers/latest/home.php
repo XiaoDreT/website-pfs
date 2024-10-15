@@ -26,6 +26,7 @@ class Home extends MY_Controller {
         $this->data['ban'] = $this->catalogues->get_data("*", array("type" => "ban", "status" => 1), 3);
         $this->data['battery'] = $this->catalogues->get_data("*", array("type" => "battery", "status" => 1), 3);
         $this->data['part'] = $this->catalogues->get_data("*", array("type" => "part", "status" => 1), 3);
+        $this->data['attachment'] = $this->catalogues->get_data("*", array("type" => "attachment", "status" => 1), 3);
         $this->data['client'] = $this->client->get_data("*", array("status" => 1));
 		$this->data ['msg'] = $this->session->flashdata('info_messages') ? get_messages(wrap_text($this->session->flashdata('info_messages')), 'alert-success') : null;
 		if ($this->input->post('send')) {

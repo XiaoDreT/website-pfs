@@ -115,7 +115,7 @@
                     <?php
                 } else {
                     ?> <form class="form-horizontal jc-margin-right" role="form" method="post"
-                          action="<?php echo base_url('admin/gallery'); ?>/catalogue"
+                          action="<?php echo config_item('localTesting'); ?>admin/gallery/catalogue"
                           enctype="multipart/form-data">
                         <div class="form-group">
                             <label class="col-lg-1 control-label" for="focus">Upload Image</label>

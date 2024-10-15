@@ -1,11 +1,11 @@
 <?
 	$link = site_url('latest/attachment')
 ?>
-<img class="img-left-title" src="<?php echo IMG_PATH; ?>attachment.png" style="cursor: pointer;" onclick="window.location = '<? echo $link; ?>'">
+<img class="img-right-title" src="<?php echo IMG_PATH; ?>assets/img/attachment.png" style="cursor: pointer;" onclick="window.location = '<? echo $link; ?>'">
 <div class="container" style="clear: right;">
 	<div class="our-works">
 		<?php  
-		foreach ($part as $row) {
+		foreach ($attachment as $row) {
 			$name = $row->name;
 			if (strlen($name) > 35) {
 				$name = substr($name, 0, 35)." ..";
